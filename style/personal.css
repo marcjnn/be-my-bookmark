@@ -39,9 +39,9 @@
 /* MAIN - nav */
 
 .subMenu {
-  width: 100%;
+  /* width: 100%; */
   text-align: right;
-  margin-top: 72px;
+  padding-top: 15px;
 }
 
 .subMenu > ul {
@@ -59,14 +59,16 @@
   background-color: #f8f8ff;
   width: 100vw;
   min-height: 100vh;
-  display: flex;
+  margin-top: 57px;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
+  /* align-items: flex-start; */
 }
 
-.boards {
+/* .boards {
   width: 100%;
-}
+} */
 
 /* .boards div:first-child {
   margin-top: 78px;
@@ -106,4 +108,22 @@ ul.boardSection {
 
 .bmDescription {
   font-size: 13px;
+}
+
+@media all and (min-width: 768px) {
+  .boards {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .newBoard {
+    width: 50%;
+    margin: 12px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .newBoard {
+    width: 33%;
+  }
 }
