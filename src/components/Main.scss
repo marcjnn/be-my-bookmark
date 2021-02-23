@@ -1,5 +1,31 @@
 @import "../style/reset.scss";
 
+.main {
+  background-color: #f8f8ff;
+  // margin-top: 50px;
+  padding: 50px 20px 0px;
+  &__menu {
+    margin: 15px 0;
+    text-align: right;
+  }
+  .menu {
+    list-style-type: none;
+    display: inline-flex;
+    text-align: center;
+    &__item {
+      width: 26px;
+      padding: 3px 5px;
+      color: #d98ba7;
+      font-size: 18px;
+      font-weight: 200;
+      &:hover {
+        background-color: #f2d5e0;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
 .subMenu {
   /* width: 100%; */
   text-align: right;
@@ -18,10 +44,9 @@
 /* MAIN - section */
 
 .personalMain {
-  background-color: #f8f8ff;
   width: 100vw;
   min-height: 100vh;
-  margin-top: 57px;
+
   /* display: flex;
   flex-wrap: wrap;
   justify-content: center; */
