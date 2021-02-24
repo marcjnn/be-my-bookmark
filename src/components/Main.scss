@@ -1,6 +1,7 @@
 @import "../style/reset.scss";
 
 .main {
+  height: 100vh;
   background-color: #f8f8ff;
   // margin-top: 50px;
   padding: 50px 20px 0px;
@@ -21,6 +22,9 @@
       &:hover {
         background-color: #f2d5e0;
         border-radius: 8px;
+      }
+      &:last-child {
+        padding: 3px 0 3px 5px;
       }
     }
   }
