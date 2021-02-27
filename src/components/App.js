@@ -4,7 +4,7 @@ import data from "../data/store.js";
 
 import Header from "./Header";
 // import Main from "./Main";
-import TopicList from "./TopicList";
+import BoardList from "./BoardList";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ function App() {
             <li className="menu__item">{plusIcon}</li>
           </ul>
         </nav>
-        <TopicList boards={boards} />
+        <BoardList boards={boards} />
       </main>
     </>
   );

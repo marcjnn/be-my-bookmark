@@ -1,8 +1,9 @@
+@import "../style/variables.scss";
 @import "../style/reset.scss";
 
 .header {
   width: 100%;
-  background-color: #d98ba7;
+  background-color: $colorPrimaryDark;
   padding: 12px 20px;
   display: flex;
   justify-content: space-between;
@@ -22,5 +23,3 @@
     font-weight: 200;
   }
 }
-
-
