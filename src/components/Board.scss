@@ -1,4 +1,5 @@
 @import "../style/variables.scss";
+@import "../style/mixins.scss";
 @import "../style/reset.scss";
 
 .board {
@@ -9,6 +10,11 @@
   margin: 15px 0px;
   padding: 12px;
   box-shadow: 0px 0px 2px $colorSecondaryDark;
+  @include tablet {
+    // width doesnt do anything as it's not a flex display anymore
+    // width: 50%;
+    // margin: 12px;
+  }
   &__title {
     color: $colorPrimaryDark;
     font-weight: 500;

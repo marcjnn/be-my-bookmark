@@ -1,0 +1,7 @@
+// media
+
+@mixin tablet {
+  @media all and (mid-width: 768px) {
+    @content;
+  }
+}
