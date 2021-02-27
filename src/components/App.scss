@@ -1,8 +1,11 @@
+@import "../style/reset.scss";
+@import "../style/variables.scss";
+
 // MAIN
 
 .main {
   height: 100vh;
-  background-color: #f8f8ff;
+  background-color: $colorBackground;
   // margin-top: 50px;
   padding: 50px 20px 0px;
   &__menu {
@@ -16,15 +19,15 @@
     &__item {
       width: 26px;
       padding: 3px 5px;
-      color: #d98ba7;
+      color: $colorSecondaryDark;
       font-size: 18px;
       font-weight: 200;
       &:hover {
-        background-color: #f2d5e0;
+        background-color: $colorPrimaryLight;
         border-radius: 8px;
       }
       &:last-child {
-        padding: 3px 0 3px 5px;
+        margin-right: -5px;
       }
     }
   }
