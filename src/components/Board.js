@@ -2,16 +2,16 @@ import "./Board.scss";
 import Card from "./Card";
 
 const Board = (props) => {
-  const cards = props.board.cards.map((card) => {
+  const cards = props.board.cards.map((card, index) => {
     return (
-      <li>
+      <li key={index} className="card">
         <Card card={card} />
       </li>
     );
   });
   return (
     <section className="board">
-      <h2>{props.board.name}</h2>
+      <h2 className="board__title">{props.board.name}</h2>
       <ul>{cards}</ul>
     </section>
   );
@@ -19,9 +19,9 @@ const Board = (props) => {
 
 export default Board;
 {
-  /* <section className="boards column">
-        <div className="newBoard">
-          <h3 className="boardName">front-end</h3>
+  /* <section className="">
+        <div className="">
+          <h3 className="">front-end</h3>
           <ul className="boardSection">
             <li>
               <h3 className="boardSectionName">html</h3>

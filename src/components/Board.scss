@@ -9,4 +9,12 @@
   margin: 15px 0px;
   padding: 12px;
   box-shadow: 0px 0px 2px $colorSecondaryDark;
+  &__title {
+    color: $colorPrimaryDark;
+    font-weight: 500;
+  }
+}
+
+.card {
+  margin-top: 15px;
 }

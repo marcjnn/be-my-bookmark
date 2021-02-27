@@ -1,0 +1,13 @@
+@import "../style/variables.scss";
+@import "../style/reset.scss";
+
+.card {
+  &__title {
+    color: $colorSecondaryDark;
+    font-weight: 400;
+  }
+}
+
+.bookmark {
+  margin-top: 15px;
+}
