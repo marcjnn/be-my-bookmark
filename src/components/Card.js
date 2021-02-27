@@ -1,7 +1,7 @@
 import Bookmark from "./Bookmark";
 
 const Card = (props) => {
-  const pins = props.board.pins.map((pin, index) => {
+  const pins = props.card.pins.map((pin, index) => {
     return (
       <li key={index}>
         <Bookmark pin={pin} />
@@ -10,7 +10,7 @@ const Card = (props) => {
   });
   return (
     <>
-      <h3>{props.board.title}</h3>
+      <h3>{props.card.title}</h3>
       <ul>{pins}</ul>
     </>
   );

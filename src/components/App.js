@@ -3,7 +3,6 @@ import "./App.scss";
 import data from "../data/store.js";
 
 import Header from "./Header";
-// import Main from "./Main";
 import BoardList from "./BoardList";
 import { useState } from "react";
 

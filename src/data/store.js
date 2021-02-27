@@ -1,7 +1,7 @@
 const data = [
   {
     name: "front-end",
-    boards: [
+    cards: [
       {
         title: "html",
         pins: [
@@ -46,7 +46,7 @@ const data = [
   },
   {
     name: "psychology",
-    boards: [
+    cards: [
       {
         title: "",
         pins: [

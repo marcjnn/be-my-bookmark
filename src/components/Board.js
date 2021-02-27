@@ -2,17 +2,17 @@ import "./Board.scss";
 import Card from "./Card";
 
 const Board = (props) => {
-  const boards = props.topic.boards.map((board) => {
+  const cards = props.board.cards.map((card) => {
     return (
       <li>
-        <Card board={board} />
+        <Card card={card} />
       </li>
     );
   });
   return (
     <section className="board">
-      <h2>{props.topic.name}</h2>
-      <ul>{boards}</ul>
+      <h2>{props.board.name}</h2>
+      <ul>{cards}</ul>
     </section>
   );
 };

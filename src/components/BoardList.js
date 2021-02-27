@@ -1,10 +1,11 @@
 import Board from "./Board";
 
 const BoardList = (props) => {
-  const topics = props.boards.map((topic) => {
-    return <Board topic={topic} />;
+  // console.log("props form app ", props);
+  const boardstoprint = props.boards.map((board) => {
+    return <Board board={board} />;
   });
-  return <>{topics}</>;
+  return <>{boardstoprint}</>;
 };
 
 export default BoardList;
