@@ -1,21 +1,34 @@
+// styles
 import "./App.scss";
 
+// data / service / store
 import data from "../data/store.js";
 
+// components
 import Header from "./Header";
-import BoardList from "./BoardList";
-import { useState } from "react";
+import Home from "./Home";
+import NewBoardDetails from "./NewBoardDetails";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
+// react
+import { useState } from "react";
+import { Route, Switch } from "react-router-dom";
+
 function App() {
   const [boards] = useState(data);
   const plusIcon = <FontAwesomeIcon icon={faPlus} />;
+
+  const renderBoard = (routerProps) => {
+    const routerTitle = routerProps.match.params.name;
+    const boardFound = boards.find((board) => board.name === routerTitle);
+    return <NewBoardDetails board={boardFound} />;
+  };
+
   return (
     <>
       <Header />
-
       <main className="main">
         <nav className="main__menu">
           <ul className="menu">
@@ -25,8 +38,13 @@ function App() {
             <li className="menu__item">{plusIcon}</li>
           </ul>
         </nav>
+        <Switch>
+          <Route exact path="/">
+            <Home boards={boards} />
+          </Route>
 
-        <BoardList boards={boards} />
+          <Route path="/board/:name" render={renderBoard} />
+        </Switch>
       </main>
     </>
   );
