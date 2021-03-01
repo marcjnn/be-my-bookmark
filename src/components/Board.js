@@ -1,7 +1,10 @@
+// A single board comopnent which includes all pined articles; each board is a single section
+
 import "./Board.scss";
 import Card from "./Card";
 
 const Board = (props) => {
+  console.log(props);
   const cards = props.board.cards.map((card, index) => {
     return (
       <li key={index} className="card">
@@ -10,11 +13,19 @@ const Board = (props) => {
     );
   });
   return (
-    <section className="board">
-      <h2 className="board__title">{props.board.name}</h2>
-      <ul>{cards}</ul>
-    </section>
+    // <section>
+    <ul>{cards}</ul>
+    // </section>
   );
 };
 
 export default Board;
+
+// const Board = (props) => {
+//   const cards = props.board.cards.map((card, index) => {
+//     return (
+//       <li key={index} className="card">
+//         <Card card={card} />
+//       </li>
+//     );
+//   });

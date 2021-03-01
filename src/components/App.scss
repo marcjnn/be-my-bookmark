@@ -22,6 +22,10 @@
       color: $colorSecondaryDark;
       font-size: 18px;
       font-weight: 200;
+      // remove later
+      &:first-child {
+        width: fit-content;
+      }
       &:hover {
         background-color: $colorPrimaryLight;
         border-radius: 8px;

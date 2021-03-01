@@ -1,0 +1,27 @@
+@import "../style/variables.scss";
+@import "../style/mixins.scss";
+@import "../style/reset.scss";
+
+.board {
+  &__list {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    column-gap: 1vw;
+    row-gap: 1vh;
+    .board {
+      // this board only for anidation purposes, no styling here!!!
+      &__item {
+        border: 1px solid $colorPrimaryDark;
+        border-radius: 6px;
+        padding: 1vh 2vw;
+        background-color: $colorSecondaryLight;
+        // width: 280px;
+        height: 15vh;
+      }
+      &__title {
+        color: $colorPrimaryDark;
+        font-weight: 500;
+      }
+    }
+  }
+}

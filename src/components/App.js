@@ -19,11 +19,13 @@ function App() {
       <main className="main">
         <nav className="main__menu">
           <ul className="menu">
+            <li className="menu__item"> placeholder for board name</li>
             <li className="menu__item">1</li>
             <li className="menu__item">2</li>
             <li className="menu__item">{plusIcon}</li>
           </ul>
         </nav>
+
         <BoardList boards={boards} />
       </main>
     </>
