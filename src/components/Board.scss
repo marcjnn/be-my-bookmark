@@ -23,4 +23,11 @@
 
 .card {
   margin-top: 15px;
+  &__title {
+    color: $colorSecondaryDark;
+    font-weight: 400;
+  }
+  .bookmark {
+    margin-top: 15px;
+  }
 }

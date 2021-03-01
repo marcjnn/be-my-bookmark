@@ -7,7 +7,7 @@ const NewBoard = (props) => {
   return (
     <>
       {/* when board -> data.name, when card -> data.cards.title */}
-      <h2 className="board__title">{props.name}</h2>
+      <h3 className="board__title">{props.name}</h3>
       {props.children}
     </>
   );

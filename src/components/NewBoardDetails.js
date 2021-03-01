@@ -1,16 +1,18 @@
+// style
+import "./Board.scss";
+
+// components
 import Card from "./Card";
 
 const NewBoardDetails = (props) => {
-  console.log(props.board);
   const cards = props.board.cards.map((card, index) => {
     return (
-      <li key={index} className="bookmark">
+      <li key={index}>
         <Card card={card} />
       </li>
     );
   });
-  let res = String(props.board.cards);
-  console.log(res);
+
   return (
     <section>
       {/* props.board.name will have to pe passed up to change in the placeholder */}
