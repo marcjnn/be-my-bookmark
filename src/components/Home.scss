@@ -13,14 +13,13 @@
       &__item {
         border: 1px solid $colorPrimaryDark;
         border-radius: 6px;
-        padding: 1vh 2vw;
+        padding: 1vw 2vw;
         background-color: $colorSecondaryLight;
         // width: 280px;
         height: 15vh;
       }
-      &__title {
-        color: $colorPrimaryDark;
-        font-weight: 500;
+      &__link {
+        text-decoration: none;
       }
     }
   }
