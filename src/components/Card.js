@@ -1,7 +1,6 @@
 // a board can (but doesn't have to) be divided into subsections if we want to group certain articles by a specific tag (eg. html, css under front-end); if no tag is specified, it just prints a list of pined articles
 
-// import "./Card.scss";
-import "./Board.scss";
+import "./Card.scss";
 
 import Bookmark from "./Bookmark";
 

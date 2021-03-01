@@ -1,0 +1,33 @@
+@import "../style/variables.scss";
+@import "../style/mixins.scss";
+@import "../style/reset.scss";
+
+.board {
+  width: 100%;
+  border: 1px solid $colorSecondaryDark;
+  border-radius: 5px;
+  background-color: $colorSecondaryLight;
+  margin: 15px 0px;
+  padding: 12px;
+  box-shadow: 0px 0px 2px $colorSecondaryDark;
+  @include tablet {
+    // width doesnt do anything as it's not a flex display anymore
+    // width: 50%;
+    // margin: 12px;
+  }
+  &__title {
+    color: $colorPrimaryDark;
+    font-weight: 500;
+  }
+}
+
+.card {
+  margin-top: 15px;
+  &__title {
+    color: $colorSecondaryDark;
+    font-weight: 400;
+  }
+  .bookmark {
+    margin-top: 15px;
+  }
+}

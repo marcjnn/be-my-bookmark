@@ -1,6 +1,6 @@
 // A single board comopnent which includes all pined articles; each board is a single section
 
-import "./Board.scss";
+// import "./Board.scss";
 import Card from "./Card";
 
 const Board = (props) => {

@@ -1,5 +1,5 @@
 // style
-import "./Board.scss";
+import "./NewBoardDetails.scss";
 
 // components
 import Card from "./Card";
