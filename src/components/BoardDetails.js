@@ -25,7 +25,7 @@ const BoardDetails = (props) => {
     <section>
       {/* props.board.name will have to pe passed up to change in the placeholder */}
       {/* <h3>{props.board.name}</h3> */}
-      <ul>{cards}</ul>
+      <ul className="boards">{cards}</ul>
     </section>
   );
 };

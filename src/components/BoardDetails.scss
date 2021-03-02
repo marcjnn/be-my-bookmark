@@ -1,6 +1,6 @@
-@import "../style/variables.scss";
-@import "../style/mixins.scss";
-@import "../style/reset.scss";
+@import "../style/_variables.scss";
+@import "../style/_mixins.scss";
+@import "../style/_reset.scss";
 
 .board {
   width: 100%;
@@ -10,6 +10,7 @@
   margin: 15px 0px;
   padding: 12px;
   box-shadow: 0px 0px 2px $colorSecondaryDark;
+
   @include tablet {
     // width doesnt do anything as it's not a flex display anymore
     // width: 50%;
@@ -29,5 +30,13 @@
   }
   .bookmark {
     margin-top: 15px;
+  }
+}
+
+.boards {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
   }
 }

@@ -1,6 +1,6 @@
-@import "../style/variables.scss";
-@import "../style/mixins.scss";
-@import "../style/reset.scss";
+@import "../style/_variables.scss";
+@import "../style/_mixins.scss";
+@import "../style/_reset.scss";
 
 .board {
   &__list {
@@ -8,6 +8,12 @@
     // grid-template-columns: repeat(2, 1fr);
     column-gap: 1vw;
     row-gap: 1vh;
+    @include media-s-breakpoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    // @include media-s-breakpoint {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
     .board {
       // this board only for anidation purposes, no styling here!!!
       &__item {
