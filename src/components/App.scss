@@ -8,6 +8,16 @@
   background-color: $colorBackground;
   // margin-top: 50px;
   padding: 50px 20px 0px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__boardName {
+    color: $colorSecondaryDark;
+    font-size: 18px;
+    font-weight: 200;
+  }
   &__menu {
     margin: 15px 0;
     text-align: right;

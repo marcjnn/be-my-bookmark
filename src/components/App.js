@@ -18,11 +18,13 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [boards] = useState(data);
+  const [boardName, setBoardName] = useState("placeholder");
   const plusIcon = <FontAwesomeIcon icon={faPlus} />;
 
   const renderBoard = (routerProps) => {
     const routerTitle = routerProps.match.params.name;
     const boardFound = boards.find((board) => board.name === routerTitle);
+    setBoardName(boardFound.name);
     return <BoardDetails board={boardFound} />;
   };
 
@@ -30,17 +32,20 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <nav className="main__menu">
-          <ul className="menu">
-            <li className="menu__item"> placeholder for board name</li>
-            <li className="menu__item">1</li>
-            <li className="menu__item">2</li>
-            <li className="menu__item">{plusIcon}</li>
-          </ul>
-        </nav>
+        <header className="main__header">
+          <h2 className="main__boardName">{boardName}</h2>
+          <nav className="main__menu">
+            <ul className="menu">
+              <li className="menu__item">1</li>
+              <li className="menu__item">2</li>
+              <li className="menu__item">{plusIcon}</li>
+            </ul>
+          </nav>
+        </header>
+
         <Switch>
           <Route exact path="/">
-            <Home boards={boards} />
+            <Home boards={boards} setBoardName={setBoardName} />
           </Route>
 
           <Route path="/board/:name" render={renderBoard} />
