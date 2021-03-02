@@ -1,4 +1,5 @@
 // style
+import { useEffect } from "react";
 import "./BoardDetails.scss";
 
 // components
@@ -11,6 +12,13 @@ const BoardDetails = (props) => {
         <Card card={card} />
       </li>
     );
+  });
+
+  useEffect(() => {
+    props.setBoardName(props.board.name);
+    return () => {
+      props.setBoardName("");
+    };
   });
 
   return (

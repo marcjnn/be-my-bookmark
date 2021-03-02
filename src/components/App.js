@@ -21,7 +21,7 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [boards] = useState(data);
-  const [boardName, setBoardName] = useState("placeholder");
+  const [boardName, setBoardName] = useState("");
   const [icons] = useState({
     plus: <FontAwesomeIcon icon={faPlus} />,
     book: <FontAwesomeIcon icon={faBook} />,
@@ -32,8 +32,7 @@ function App() {
   const renderBoard = (routerProps) => {
     const routerTitle = routerProps.match.params.name;
     const boardFound = boards.find((board) => board.name === routerTitle);
-    setBoardName(boardFound.name);
-    return <BoardDetails board={boardFound} />;
+    return <BoardDetails board={boardFound} setBoardName={setBoardName} />;
   };
 
   return (
@@ -52,7 +51,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home boards={boards} setBoardName={setBoardName} />
+            <Home boards={boards} />
           </Route>
 
           <Route path="/board/:name" render={renderBoard} />

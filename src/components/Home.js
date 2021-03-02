@@ -10,7 +10,6 @@ import Board from "./Board";
 import { Link } from "react-router-dom";
 
 const Home = (props) => {
-  props.setBoardName("")
   const boardList = props.boards.map((board, index) => {
     return (
       <li key={index} className="board__item">
