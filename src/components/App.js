@@ -7,7 +7,7 @@ import data from "../data/store.js";
 // components
 import Header from "./Header";
 import Home from "./Home";
-import NewBoardDetails from "./NewBoardDetails";
+import BoardDetails from "./BoardDetails";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +23,7 @@ function App() {
   const renderBoard = (routerProps) => {
     const routerTitle = routerProps.match.params.name;
     const boardFound = boards.find((board) => board.name === routerTitle);
-    return <NewBoardDetails board={boardFound} />;
+    return <BoardDetails board={boardFound} />;
   };
 
   return (

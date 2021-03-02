@@ -4,7 +4,7 @@
 import "./Home.scss";
 
 // components
-import NewBoard from "./NewBoard";
+import Board from "./Board";
 
 // react
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const Home = (props) => {
     return (
       <li key={index} className="board__item">
         <Link to={`/board/${board.name}`} className="board__link">
-          <NewBoard name={board.name}></NewBoard>
+          <Board name={board.name}></Board>
         </Link>
       </li>
     );

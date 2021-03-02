@@ -1,10 +1,10 @@
 // style
-import "./NewBoardDetails.scss";
+import "./BoardDetails.scss";
 
 // components
 import Card from "./Card";
 
-const NewBoardDetails = (props) => {
+const BoardDetails = (props) => {
   const cards = props.board.cards.map((card, index) => {
     return (
       <li key={index}>
@@ -22,4 +22,4 @@ const NewBoardDetails = (props) => {
   );
 };
 
-export default NewBoardDetails;
+export default BoardDetails;

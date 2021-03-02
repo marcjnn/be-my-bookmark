@@ -1,31 +1,16 @@
-// A single board comopnent which includes all pined articles; each board is a single section
+// this one is to try to combine two into one and pass as props children
 
-// import "./Board.scss";
-import Card from "./Card";
+// style
+import "./Board.scss";
 
 const Board = (props) => {
-  console.log(props);
-  const cards = props.board.cards.map((card, index) => {
-    return (
-      <li key={index} className="card">
-        <Card card={card} />
-      </li>
-    );
-  });
   return (
-    // <section>
-    <ul>{cards}</ul>
-    // </section>
+    <>
+      {/* when board -> data.name, when card -> data.cards.title */}
+      <h3 className="board__title">{props.name}</h3>
+      {props.children}
+    </>
   );
 };
 
 export default Board;
-
-// const Board = (props) => {
-//   const cards = props.board.cards.map((card, index) => {
-//     return (
-//       <li key={index} className="card">
-//         <Card card={card} />
-//       </li>
-//     );
-//   });
