@@ -8,10 +8,10 @@ import data from "../data/store.js";
 import Header from "./Header";
 import Home from "./Home";
 import BoardDetails from "./BoardDetails";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 // font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 

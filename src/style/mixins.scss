@@ -5,3 +5,25 @@
     @content;
   }
 }
+
+// media by bootstrap breakpoints
+@mixin media-s-breakpoint {
+  @media all and (mid-width: 576px) {
+    @content;
+  }
+}
+@mixin media-m-breakpoint {
+  @media all and (mid-width: 768px) {
+    @content;
+  }
+}
+@mixin media-l-breakpoint {
+  @media all and (mid-width: 992px) {
+    @content;
+  }
+}
+@mixin media-xl-breakpoint {
+  @media all and (mid-width: 1200px) {
+    @content;
+  }
+}
