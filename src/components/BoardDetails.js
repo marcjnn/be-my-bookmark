@@ -16,10 +16,10 @@ const BoardDetails = (props) => {
 
   useEffect(() => {
     props.setBoardName(props.board.name);
-    return () => {
-      props.setBoardName("");
-    };
-  });
+    // return () => {
+    //   props.setBoardName("");
+    // };
+  }, [props.boardName]);
 
   return (
     <section>

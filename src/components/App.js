@@ -1,43 +1,40 @@
-// styles
+// styles & resources
 import "./App.scss";
+import icons from "../assets/icons";
 
 // data / service / store
 import data from "../data/store.js";
+
+// react
+import { useState } from "react";
+import { Route, Switch } from "react-router-dom";
 
 // components
 import Header from "./Header";
 import Home from "./Home";
 import BoardDetails from "./BoardDetails";
 
-// font awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
-
-// react
-import { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+// APP
 
 function App() {
   const [boards] = useState(data);
-  const [boardName, setBoardName] = useState("");
-  const [icons] = useState({
-    plus: <FontAwesomeIcon icon={faPlus} />,
-    book: <FontAwesomeIcon icon={faBook} />,
-    user: <FontAwesomeIcon icon={faUserCircle} />,
-  });
-  // const plusIcon = <FontAwesomeIcon icon={faPlus} />;
+  const [boardName, setBoardName] = useState("placeholder");
 
   const renderBoard = (routerProps) => {
     const routerTitle = routerProps.match.params.name;
     const boardFound = boards.find((board) => board.name === routerTitle);
-    return <BoardDetails board={boardFound} setBoardName={setBoardName} />;
+    return (
+      <BoardDetails
+        board={boardFound}
+        setBoardName={setBoardName}
+        boardName={boardName}
+      />
+    );
   };
 
   return (
     <>
-      <Header icon={icons.user} />
+      <Header />
       <main className="main">
         <header className="main__header">
           <h2 className="main__boardName">{boardName}</h2>
@@ -51,7 +48,11 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home boards={boards} />
+            <Home
+              boards={boards}
+              setBoardName={setBoardName}
+              boardName={boardName}
+            />
           </Route>
 
           <Route path="/board/:name" render={renderBoard} />
